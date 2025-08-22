@@ -206,9 +206,7 @@ export default function BootcampPage() {
       image: "/images/data_analysis.jpg",
     },
   ];
-    }))
-  } 
-
+  
   const courseModules = [
     {
       id: "software-development",
