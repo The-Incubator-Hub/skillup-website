@@ -24,6 +24,7 @@ export default function AboutPage() {
         { number: "384", label: "students enrolled" },
         { number: "8", label: "Courses Offered" },
       ],
+      images: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756138215/Copy_of_IMG_2591_ecgb80.jpg"
     },
     phc: {
       title: "SkillUp Port Harcourt",
@@ -38,6 +39,7 @@ export default function AboutPage() {
         { number: "117", label: "Students enrolled" },
         { number: "6", label: "Courses Offered" },
       ],
+      images:"https://res.cloudinary.com/dq2jag0q6/image/upload/v1756138228/3_chvd7f.jpg"
     },
     kaduna: {
       title: "SkillUp Redemption Camp",
@@ -53,6 +55,7 @@ export default function AboutPage() {
         { number: "327", label: "Students enrolled" },
         { number: "4", label: "Courses Offered" },
       ],
+      images: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756138214/2_vg7ltj.jpg"
     },
   } as const
 
@@ -224,11 +227,12 @@ export default function AboutPage() {
 
             <div className="flex justify-center">
               <Image
-                src="/placeholder.svg?height=400&width=350"
+                src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756146453/man-siting_s0xaoh.jpg"
                 alt="Happy student with book giving thumbs up"
                 width={350}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg shadow-lg object-cover w-full h-full"
+                unoptimized
               />
             </div>
           </div>
@@ -272,7 +276,7 @@ export default function AboutPage() {
                     activeTab === "kaduna" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
-                  Skillup Kaduna
+                  Skillup Redemption Camp
                 </button>
               </div>
 
@@ -299,8 +303,8 @@ export default function AboutPage() {
 
                   <div className="grid grid-cols-2 gap-6">
                     {currentContent.stats.map((stat, index) => (
-                      <div key={index} className="text-center bg-[#9FBDFA]/25 ">
-                        <div className="text-3xl font-bold  text-blue-600 mb-1">{stat.number}</div>
+                      <div key={index} className="text-center rounded-md p-2 bg-[#9FBDFA]/25 ">
+                        <div className="text-3xl font-bold text-blue-600 mb-1">{stat.number}</div>
                         <div className="text-[#0D43FF] text-sm">{stat.label}</div>
                       </div>
                     ))}
@@ -308,13 +312,17 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex justify-center">
+                  
                   <Image
-                    src="/images/history-image.png"
-                    alt="Students working together on projects"
+                    
+                    src={currentContent.images}
+                    alt={`Image ${currentContent.images + 1}`}
                     width={400}
                     height={300}
                     className="rounded-lg shadow-lg w-full max-w-md"
+                    unoptimized
                   />
+                  
                 </div>
               </div>
             </div>

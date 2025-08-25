@@ -276,7 +276,7 @@ export default function BootcampPage() {
   };
 
   return (
-    <div className="min-h-screen relative bg-white">
+    <div className="min-h-screen relative bg-white flex flex-col ">
       <NavbarWithDropdown />
       
       {/* Header */}
@@ -304,14 +304,14 @@ export default function BootcampPage() {
         </div>
       </div>
 
-      <section className=" mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <section className=" mx-auto px-20 py-6 sm:py-8">
         <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/bootcamp-hero.png"
+                src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756146941/tech-trybe_p1tlck.png"
                 alt="Tech Tribe Bootcamp - Students working on laptops"
                 width={800}
                 height={400}
