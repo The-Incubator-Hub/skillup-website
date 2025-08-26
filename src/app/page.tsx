@@ -64,7 +64,7 @@ export default function Home() {
       <div
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/herro.jpg')",
+          backgroundImage: "url('https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134161/rename_ldcybc.jpg')",
         }}
       >
         {/* Dark overlay */}
@@ -227,11 +227,12 @@ export default function Home() {
                     <div className="absolute top-4 left-4 sm:top-5 sm:left-5 md:top-6 md:left-6 w-full h-full rounded-full border border-[#0D4EFF] bg-[#0D4EFF]" />
                     <div className="absolute top-16 left-12 sm:top-20 sm:left-16 md:top-24 md:left-20 lg:top-[89px] lg:left-[68px] w-48 h-56 sm:w-56 sm:h-64 md:w-64 md:h-72 lg:w-[366px] lg:h-[432px] rounded-full overflow-hidden">
                       <Image
-                        src="/images/student.png"
+                        src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134100/choose_skillup_fed5z3.png"
                         alt="Student with thumbs up"
                         width={366}
                         height={432}
                         className="w-full h-full object-cover"
+                        unoptimized
                       />
                     </div>
                   </div>
@@ -483,8 +484,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <Testimonials />
+      {/* Testimonials Section */} 
+      <Testimonials /> 
 
       {/* FAQ Section */}
       <Faq/>
@@ -546,12 +547,11 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="overflow-hidden  bg-white ">
-                <Image
+              <Card className="overflow-hidden  bg-white "> 
+                <Image 
                   src="/images/blog_three.jpg"
-                  alt="Stressed person with papers"
+                  alt="Stressed person with papers" 
                   width={500}
                   height={250}
                   className="w-full h-64 object-cover"
@@ -642,9 +642,11 @@ export default function Home() {
 {/* Chatbot Icon */}
 <div className="fixed bottom-6 right-6 w-28 h-28 rounded-[40px] overflow-hidden z-50"> 
   <Image
-    className="w-20 h-20 left-[20px] top-[20px] absolute" 
-    src="images/chat.png" 
+    src="/images/chat.png" 
     alt="Chatbot"
+    width={80}   // required
+    height={80}  // required
+    className="absolute left-[20px] top-[20px]"
   />
 </div>
 

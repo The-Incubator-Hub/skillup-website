@@ -126,17 +126,13 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/hero-image.png"
+                  src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756133369/1_zn9l2y.jpg"
                   alt="Students collaborating on technology projects"
                   width={500}
                   height={300}
                   className="w-full h-auto"
+                  unoptimized
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="rounded-full w-16 h-16 bg-white/90 hover:bg-white text-blue-600 flex items-center justify-center transition-colors duration-200 shadow-lg">
-                    <Play className="w-6 h-6 ml-1" />
-                  </button>
-                </div>
               </div>
             </div>
           </div>

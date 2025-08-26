@@ -6,12 +6,9 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/UI/button"
 import Image from "next/image"
 import Link from "next/link"
-
-
 interface NavbarWithDropdownProps {
   className?: string
 }
-
 export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMenuOpen, setIsMenuOpen] = useState(false)

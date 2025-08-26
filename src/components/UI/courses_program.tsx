@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/UI/button";
+import { Button } from "@/components/UI/button";  
 import { 
-  Clock,
-  Bookmark,
-  ExternalLink, 
-  ChevronLeft,
+  Clock, 
+  Bookmark,  
+  ExternalLink,  
+  ChevronLeft, 
   ChevronRight,
 } from "lucide-react";
     
@@ -62,7 +62,7 @@ export default function CoursesProgramsSection() {
       lessons: "5 Live Projects",
       duration: "3 months",
       price: "₦200,000",
-      image: "/images/software.jpg",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134134/AI_ML_Intermediate__bbn38u.jpg",
     },
     {
       title: "Project Management Essentials ",
@@ -89,7 +89,7 @@ export default function CoursesProgramsSection() {
       lessons: "5 Live Projects",
       duration: "3 Months",
       price: "₦200,000",
-      image: "/images/ai.png",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134138/Data_Analysis_Visualization_j3ad4a.jpg",
     },
     {
       title: "Product Design & UX/UI ",
@@ -98,7 +98,7 @@ export default function CoursesProgramsSection() {
       lessons: "5 Live Projects",
       duration: "3 Months",
       price: "₦200,000",
-      image: "/images/projectt.jpg",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134166/Product_Design_UX_UI_o357u2.jpg",
     },
   ];
 
@@ -109,9 +109,10 @@ export default function CoursesProgramsSection() {
         "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage",
       duration: "3 Months",
       projects: "Practical, mentor-led sessions + project-based learning",
-      image: "/images/techtribe.png",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134179/tribe_ycwxxg.jpg",
       waitlistCount: 50,
       profileImages: ["/images/pic.png", "/images/pic.png", "/images/pic.png"],
+     
     },
     {
       title: "AI NOW Bootcamp",
@@ -119,7 +120,7 @@ export default function CoursesProgramsSection() {
         "Be part of Africa's biggest push to build world-class tech talent. Through our  Tech Scholarship Drive, you'll gain fully sponsored access to cutting-edge training. Over 4 months, you'll work on real-world projects, collaborate with mentors, and unlock career opportunities in the booming digital economy.",
       duration: "4 Months",
       projects: "Scholarship-based, hands-on training with live projects",
-      image: "/images/futureclan.png",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134122/ai_now_wtzyup.jpg",
       waitlistCount: 32,
       profileImages: ["/images/pic.png", "/images/pic.png", "/images/pic.png"],
     },
@@ -269,6 +270,7 @@ function CourseCard({ course }: { course: Course }) {
           width={402}
           height={237}
           className="w-full h-48 object-cover rounded-t-[16px] ]"
+          unoptimized
         />
         <div className="absolute bottom-4 left-4 bg-white text-[#52525B] flex items-center gap-2 px-3 py-1 rounded-full shadow-md">
           <Clock className="h-4 w-4 text-[#52525B]" />
@@ -324,6 +326,7 @@ function ProgramCard({ program, index }: ProgramCardProps) {
           width={402}
           height={300} // Increased image height
           className="w-full h-72 object-cover rounded-t-[16px] text-[#14183E]"
+          unoptimized
         />
 
         {/* Show "Coming Soon" only if NOT the first card */}
@@ -374,6 +377,7 @@ function ProgramCard({ program, index }: ProgramCardProps) {
                   width={32}
                   height={32}
                   className="rounded-full border-2 border-white"
+                  unoptimized
                 />
               ))}
             </div>
