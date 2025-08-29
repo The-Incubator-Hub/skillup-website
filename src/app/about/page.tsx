@@ -22,7 +22,7 @@ export default function AboutPage() {
       ],
       stats: [
         { number: "384", label: "students enrolled" },
-        { number: "8", label: "Courses Offered" },
+        { number: "4", label: "Courses Offered" },
       ],
       images: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756138215/Copy_of_IMG_2591_ecgb80.jpg"
     },
@@ -37,7 +37,7 @@ export default function AboutPage() {
       ],
       stats: [
         { number: "117", label: "Students enrolled" },
-        { number: "6", label: "Courses Offered" },
+        { number: "4", label: "Courses Offered" },
       ],
       images:"https://res.cloudinary.com/dq2jag0q6/image/upload/v1756138228/3_chvd7f.jpg"
     },
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 <div className="text-gray-600">Graduates</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">1+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">10+</div>
                 <div className="text-gray-600">Years</div>
               </div>
             </div>

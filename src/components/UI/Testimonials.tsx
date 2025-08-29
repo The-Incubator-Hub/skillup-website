@@ -156,7 +156,7 @@ export default function Testimonials() {
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-[#14183E] mb-1">
-                      <FlipNumber value={1} />+
+                      <FlipNumber value={10} />+
                     </div>
                     <div className="text-gray-600 text-sm">Tutors</div>
                   </div>

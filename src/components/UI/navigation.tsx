@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { NavigationDropdown } from "./navigation-dropdown"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/UI/button"
@@ -26,7 +26,18 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
   const toggleMobileDropdown = (menu: string) => {
     setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu)
   }
+  const [isVisible, setIsVisible] = useState(false)
 
+  useEffect(() => {
+    // Delay popup slightly to ensure it loads after page hydration
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (!isVisible) return null
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 ${className}`}
@@ -95,13 +106,24 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
 
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button
-              variant="outline"
-              className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent text-sm px-4"
-            >
-              Login
-            </Button>
-            <Button className="text-white bg-blue-900 hover:bg-blue-700 text-sm px-4">Apply Now</Button>
+           <Button
+               variant="outline"
+                onClick={() =>
+                alert("Coming Soon! We'll notify you when this program opens for enrollment.")
+                  }
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent text-sm px-4"
+                  >
+                   Login
+                 </Button>
+
+            <Link 
+               href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u"
+                passHref
+               >
+              <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">
+               Apply Now
+                   </Button>
+                  </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -178,7 +200,14 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
                 Login
               </Button>
 
-              <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">Apply Now</Button>
+              <Link 
+               href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u"
+                passHref
+               >
+              <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">
+               Apply Now
+                   </Button>
+                  </Link>
             </div>
           </div>
         </div>

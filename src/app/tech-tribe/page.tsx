@@ -325,7 +325,7 @@ export default function BootcampPage() {
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756146941/tech-trybe_p1tlck.png"
+                src="/images/landscapetribe.png"
                 alt="Tech Tribe Bootcamp - Students working on laptops"
                 width={800}
                 height={400}

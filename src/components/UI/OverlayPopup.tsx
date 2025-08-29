@@ -43,9 +43,9 @@ export default function OverlayPopup() {
 
           {/* Foreground Image */}
           <div className="absolute inset-2 sm:inset-4 lg:inset-0 z-2">
-            <div className="relative w-full h-full lg:w-[433px] lg:h-[582px] lg:top-[24px] lg:left-[29px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-full lg:w-[370px] lg:h-[582px] lg:top-[24px] lg:left-[19px] rounded-lg overflow-hidden">
               <Image
-                src="/images/tribe.png"
+                src="/images/skill_up.png"
                 alt="Tech Tribe"
                 fill
                 className="object-cover rounded-lg"
@@ -76,9 +76,9 @@ export default function OverlayPopup() {
           </h2>
 
           <p className="font-inter text-center text-sm sm:text-base lg:text-[16px] leading-relaxed lg:leading-[24px] text-[#344054] max-w-full lg:max-w-[460px]">
-            You're ready to publish your content for everyone to see. Please
-            take a moment to review all the details carefully to ensure
-            everything is accurate and complete.
+           Get Your money’s worth
+           Whether you’re a career switcher, freelancer, or young professional, 
+           Tech Trybe will equip you with the tools to thrive in today’s digital economy.
           </p>
 
           <button
