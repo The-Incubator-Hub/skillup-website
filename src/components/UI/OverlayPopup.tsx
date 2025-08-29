@@ -71,9 +71,7 @@ export default function OverlayPopup() {
             Register for Tech Tribe
           </h1>
 
-          <h2 className="font-jost font-semibold text-center text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-tight lg:leading-[120%] text-[#1E3A8A] max-w-full lg:max-w-[461px]">
-            Get 21% off
-          </h2>
+          
 
           <p className="font-inter text-center text-sm sm:text-base lg:text-[16px] leading-relaxed lg:leading-[24px] text-[#344054] max-w-full lg:max-w-[460px]">
            Get Your money’s worth

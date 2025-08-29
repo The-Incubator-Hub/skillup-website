@@ -109,7 +109,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
            <Button
                variant="outline"
                 onClick={() =>
-                alert("Coming Soon! We'll notify you when this program opens for enrollment.")
+                alert("Coming Soon! We'll notify you when this program opens for enrollment.")  
                   }
                   className="border-orange-500 text-orange-500 hover:bg-orange-50 bg-transparent text-sm px-4"
                   >
