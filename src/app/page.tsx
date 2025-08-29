@@ -227,7 +227,7 @@ export default function Home() {
                     <div className="absolute top-4 left-4 sm:top-5 sm:left-5 md:top-6 md:left-6 w-full h-full rounded-full border border-[#0D4EFF] bg-[#0D4EFF]" />
                     <div className="absolute top-16 left-12 sm:top-20 sm:left-16 md:top-24 md:left-20 lg:top-[89px] lg:left-[68px] w-48 h-56 sm:w-56 sm:h-64 md:w-64 md:h-72 lg:w-[366px] lg:h-[432px] rounded-full overflow-hidden">
                       <Image
-                        src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134100/choose_skillup_fed5z3.png"
+                        src="/images/skill_up.png"
                         alt="Student with thumbs up"
                         width={366}
                         height={432}
@@ -322,7 +322,7 @@ export default function Home() {
         <section className="relative w-full h-full overflow-hidden">
           {/* Main background image */}
           <Image
-            src="/images/Become.jpg"
+            src="/images/studentss.JPG"
             alt="Group of professionals walking together"
             fill
             className="object-cover object-top z-0"
@@ -348,7 +348,7 @@ export default function Home() {
 
             {/* Bottom background image */}
             <Image
-              src="/images/ec3824486a67fdb44f3d77c256717dc00f453974.png"
+              src="/images/first_overlay.jpg"
               alt="Students collaborating and studying together"
               fill
               className="object-cover opacity-60 z-0"
@@ -414,7 +414,7 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/two.jpg"
+                  src="/images/Facilitators.jpg"
                   alt=" Two professionals collaborating at desk "
                   width={418}
                   height={380}
@@ -472,7 +472,7 @@ export default function Home() {
               </div>
               <div className="bg-white rounded-2xl overflow-hidden shadow-sm">
                 <Image
-                  src="/images/book.jpg"
+                  src="/images/whygood.jpg"
                   alt="Library with curved bookshelves"
                   width={400}
                   height={300}
@@ -506,7 +506,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <Card className="overflow-hidden bg-white">
                 <Image
-                  src="/images/blog_one.jpg"
+                  src="/images/consistent.jpg"
                   alt="Person learning with laptop"
                   width={500}
                   height={250}
@@ -528,7 +528,7 @@ export default function Home() {
 
               <Card className="overflow-hidden  bg-white">
                 <Image
-                  src="/images/blog_two.jpg"
+                  src="/images/right_course.jpg"
                   alt="Person studying with books and laptop"
                   width={500}
                   height={250}
@@ -550,7 +550,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="overflow-hidden  bg-white "> 
                 <Image 
-                  src="/images/blog_three.jpg"
+                  src="/images/remote.jpg"
                   alt="Stressed person with papers" 
                   width={500}
                   height={250}
@@ -574,7 +574,7 @@ export default function Home() {
 
               <Card className="overflow-hidden  bg-white">
                 <Image
-                  src="/images/blog_four.jpg"
+                  src="/images/beginners.jpg"
                   alt="Team collaboration with sticky notes"
                   width={500}
                   height={250}
@@ -605,7 +605,7 @@ export default function Home() {
           
           {/* Vector Image Positioned */}
           <Image
-            src="/images/vector.png"
+            src="/images/Shape.png"
             alt="Decorative Vector"
             width={500}
             height={700}

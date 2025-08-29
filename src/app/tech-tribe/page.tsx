@@ -3,7 +3,7 @@ import { NavbarWithDropdown } from "@/components/UI/navigation"
 import Footer from "@/components/UI/Footer"
 import { Monitor, Video, Link, CheckCircle, Star, ChevronDown, ChevronUp, Clock, Users, Award, Globe } from "lucide-react"
 import Image from "next/image"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { Button } from "@/components/UI/button"
 import {
   Bookmark,
@@ -12,9 +12,9 @@ import {
   ChevronRight,
 } from "lucide-react"
 
-interface Course {
+interface Course {  
   title: string;
-  description: string;
+  description: string; 
   lessons: string;
   duration: string;
   price: string;
@@ -206,7 +206,7 @@ export default function BootcampPage() {
       image: "/images/data_analysis.jpg",
     },
   ];
-
+  
   const courseModules = [
     {
       id: "software-development",
@@ -275,8 +275,22 @@ export default function BootcampPage() {
     setCurrentSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
   };
 
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    // Delay popup slightly to ensure it loads after page hydration
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (!isVisible) return null
+
+
   return (
-    <div className="min-h-screen relative bg-white">
+    <div className="min-h-screen relative bg-white flex flex-col ">
       <NavbarWithDropdown />
       
       {/* Header */}
@@ -304,14 +318,14 @@ export default function BootcampPage() {
         </div>
       </div>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <section className=" mx-auto px-20 py-6 sm:py-8">
         <div className="grid lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-6 sm:space-y-8">
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/bootcamp-hero.png"
+                src="https://res.cloudinary.com/dq2jag0q6/image/upload/v1756146941/tech-trybe_p1tlck.png"
                 alt="Tech Tribe Bootcamp - Students working on laptops"
                 width={800}
                 height={400}
@@ -476,7 +490,12 @@ export default function BootcampPage() {
           <div className="space-y-6">
             {/* Enrollment Card */}
             <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm sticky top-6">
-              <button className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-6">
+              <button 
+              onClick={() => {
+              setIsVisible(false);
+              window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u";
+            }}
+              className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-6">
                 Enroll now
               </button>
 

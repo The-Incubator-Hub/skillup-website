@@ -53,7 +53,7 @@ export default function CoursesProgramsSection() {
       lessons: "40 Lessons",
       duration: "12h 25mins",
       price: "₦100,000",
-      image: "/images/explore.jpg",
+      image: "/images/Virtual Assistant.jpg",
     },
     {
       title: "AI/ML Intermediate Program",
@@ -71,7 +71,7 @@ export default function CoursesProgramsSection() {
       lessons: "40 Lessons",
       duration: "12h 25mins",
       price: "₦200,000",
-      image: "/images/data_analysis.jpg",
+      image: "/images/Project Management.jpg",
     },
     {
       title: "Web Development Mastery",
@@ -80,7 +80,7 @@ export default function CoursesProgramsSection() {
       lessons: "5 Live Projects",
       duration: "3 Months",
       price: "₦150,000",
-      image: "/images/two.jpg",
+      image: "/images/Web Development.jpg",
     },
     {
       title: "Data Analysis & Visualization ",
@@ -317,6 +317,15 @@ function CourseCard({ course }: { course: Course }) {
 // PROGRAM CARD
 // =====================
 function ProgramCard({ program, index }: ProgramCardProps) {
+  const handleWaitlistClick = () => {
+  if (index === 0) {
+    // TechTribe program - redirect to specific page
+    window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u";
+  } else {
+    // AI NOW or other programs - show coming soon or different action
+    alert("Coming Soon! We'll notify you when this program opens for enrollment.");
+  }
+};
   return (
     <div className="overflow-hidden hover:shadow-lg transition-shadow bg-white rounded-[16px]">
       <div className="relative">
@@ -387,7 +396,9 @@ function ProgramCard({ program, index }: ProgramCardProps) {
           </div>
 
           {/* Right side: button */}
-          <button className="bg-white border-2 border-blue-600 hover:bg-blue-900 text-black hover:text-white text-sm lg:text-[20px] px-4 lg:px-6 py-3 rounded-md transition-all">
+          <button 
+          onClick={handleWaitlistClick}
+          className="bg-white border-2 border-blue-600 hover:bg-blue-900 text-black hover:text-white text-sm lg:text-[20px] px-4 lg:px-6 py-3 rounded-md transition-all">
             Join Waitlist Now
           </button>
         </div>

@@ -62,7 +62,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar";
     },
   ];
 
-export default function Testimonials() {
+export default function Testimonials() { 
     return (
       <section className="py-20 bg-[#EFF6FF]">
         <div className="max-w-7xl mx-auto px-4">
@@ -165,6 +165,6 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-      </section>             
+      </section>              
     )
-}
+} 

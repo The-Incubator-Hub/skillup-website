@@ -6,6 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/UI/button"
 import Image from "next/image"
 import Link from "next/link"
+
 interface NavbarWithDropdownProps {
   className?: string
 }
@@ -56,7 +57,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/">
               <button
-                onClick={() => toggleDropdown("individuals")}
+                
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <span>Home</span>
@@ -66,7 +67,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
 
             <Link href="/about">
               <button
-                onClick={() => toggleDropdown("corporates")}
+                
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <span>About Us</span>
@@ -75,7 +76,6 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
             </Link>
             <Link href="/tech-tribe">
               <button
-                onClick={() => toggleDropdown("company")}
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <span>Tech Trybe</span>
@@ -84,7 +84,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
 
             <Link href="/contact">
               <button
-                onClick={() => toggleDropdown("company")}
+                
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
               >
                 <span>Contact us</span>

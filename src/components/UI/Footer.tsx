@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  X,
+  Facebook,
   Instagram,
   Youtube,
   Linkedin,
@@ -26,16 +26,16 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-4">
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
-                  <X className="w-5 h-5" />
+                <Link href="" className="text-gray-600 hover:text-gray-900">
+                  <Facebook className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link href="https://www.instagram.com/theskillupglobal?igsh=YzljYTk1ODg3Zg==" className="text-gray-600 hover:text-gray-900">
                   <Instagram className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link href="" className="text-gray-600 hover:text-gray-900">
                   <Youtube className="w-5 h-5" />
                 </Link>
-                <Link href="#" className="text-gray-600 hover:text-gray-900">
+                <Link href="https://www.linkedin.com/company/theskillupglobal" className="text-gray-600 hover:text-gray-900">
                   <Linkedin className="w-5 h-5" />
                 </Link>
               </div>
