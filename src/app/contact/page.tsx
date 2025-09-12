@@ -2,24 +2,25 @@
 
 import type React from "react"
 
-import { Button } from "@/components/UI/button";
+import { Button } from "@/components/UI/button";  
 import { Input } from "@/components/UI/input";
 import { NavbarWithDropdown } from "@/components/UI/navigation";
 import Footer from "@/components/UI/Footer";
 import Faq from "@/components/UI/Faq";
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/link"; 
+import Image from "next/image"; 
 import { Mail, Phone, MapPin,X, Facebook, Twitter, Linkedin, Instagram, Dribbble,Youtube } from "lucide-react"
 import { useState } from "react"
 
-export default function ContactSection() {
+export default function ContactSection(){ 
+
     const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
+    name: "", 
+    email: "", 
+    subject: "",  
     company: "",
     message: "",
-  })
+  }) 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -29,7 +30,7 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
-    // Handle form submission here
+    // Handle form submission here 
   }
   return (
     <div className="min-h-screen relative">
@@ -57,10 +58,6 @@ export default function ContactSection() {
             We&apos;d love to hear from you. Whether you&apos;re interested in our digital skills bootcamps, exploring online tech training in Nigeria, or looking to partner in building tech talent in Africa. Share your ideas, projects, or inquiries, and our team will get back to you promptly.
           </p>
         </div>
-      
- 
-      
-
 
 
       </div>

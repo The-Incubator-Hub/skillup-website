@@ -3,14 +3,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function OverlayPopup() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false) 
 
   useEffect(() => {
     // Delay popup slightly to ensure it loads after page hydration
     const timer = setTimeout(() => {
       setIsVisible(true)
-    }, 300)
-
+    }, 300) 
     return () => clearTimeout(timer)
   }, [])
 
@@ -43,9 +42,9 @@ export default function OverlayPopup() {
 
           {/* Foreground Image */}
           <div className="absolute inset-2 sm:inset-4 lg:inset-0 z-2">
-            <div className="relative w-full h-full lg:w-[370px] lg:h-[582px] lg:top-[24px] lg:left-[19px] rounded-lg overflow-hidden">
+            <div className="relative w-full h-full lg:w-[370px] lg:h-[590px] lg:top-[15px] lg:left-[19px] rounded-lg overflow-hidden">
               <Image
-                src="/images/skill_up.png"
+                src="/images/popup_img.png"
                 alt="Tech Tribe"
                 fill
                 className="object-cover rounded-lg"
@@ -65,10 +64,10 @@ export default function OverlayPopup() {
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Right Section */} 
         <div className="flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 flex-1 lg:w-[508px] gap-4 sm:gap-6 lg:gap-8">
           <h1 className="font-jost font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-[56px] leading-tight lg:leading-[120%] text-[#101828] max-w-full lg:max-w-[461px]">
-            Register for Tech Tribe
+          Register for Tech Trybe
           </h1>
 
           
@@ -86,7 +85,7 @@ export default function OverlayPopup() {
             }}
             className="bg-[#1E3B8A] text-white font-inter font-medium rounded-md hover:bg-blue-700 transition-all duration-300 w-full max-w-[444px] h-12 sm:h-14 lg:h-[56px] px-6 sm:px-8 text-sm sm:text-base"
           >
-            Start Now
+            Enroll Now
           </button>
         </div>
       </div>

@@ -104,10 +104,10 @@ export default function CoursesProgramsSection() {
 
   const programsData: Program[] = [
     {
-      title: "Tech Tribe Bootcamp",
+      title: "Tech Trybe Bootcamp",
       description:
         "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage",
-      duration: "3 Months",
+      duration: "6 weeks",
       projects: "Practical, mentor-led sessions + project-based learning",
       image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134179/tribe_ycwxxg.jpg",
       waitlistCount: 50,
@@ -115,11 +115,11 @@ export default function CoursesProgramsSection() {
      
     },
     {
-      title: "AI NOW Bootcamp",
+      title: "Tech Trybe Plus",
       description:
-        "Be part of Africa's biggest push to build world-class tech talent. Through our  Tech Scholarship Drive, you'll gain fully sponsored access to cutting-edge training. Over 4 months, you'll work on real-world projects, collaborate with mentors, and unlock career opportunities in the booming digital economy.",
-      duration: "4 Months",
-      projects: "Scholarship-based, hands-on training with live projects",
+        "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage.  In 12 weeks, you’ll work on real-world projects, collaborate with mentors, and unlock career opportunities in the booming digital economy.",
+      duration: "12 weeks",
+      projects: "Practical, mentor-led sessions + project-based learning",
       image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134122/ai_now_wtzyup.jpg",
       waitlistCount: 32,
       profileImages: ["/images/pic.png", "/images/pic.png", "/images/pic.png"],

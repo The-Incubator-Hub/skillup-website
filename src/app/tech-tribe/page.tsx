@@ -325,11 +325,12 @@ export default function BootcampPage() {
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/landscapetribe.png"
+                src="/images/Tech.png"
                 alt="Tech Tribe Bootcamp - Students working on laptops"
                 width={800}
                 height={400}
                 className="w-full h-48 sm:h-64 lg:h-auto object-cover"
+                unoptimized
               />
             </div>
 
@@ -546,6 +547,7 @@ export default function BootcampPage() {
 
             {/* Program Schedule */}
             <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm">
+            <h3 className="font-semibold text-gray-900 mb-4">Program Timeline</h3>
               <h3 className="font-semibold text-gray-900 mb-4">Your 6-Week Journey</h3>
               <div className="space-y-3 text-sm">
                 <div className="flex items-start gap-3">

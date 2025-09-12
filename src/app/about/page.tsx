@@ -143,20 +143,23 @@ export default function AboutPage() {
           {/* Stats Section */}
           <div className="text-center mb-16">
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              We provide professional tutoring that can help you break into tech and make an impact in your industry.
+            We provide professional tutoring that can help you break into tech and make an impact in your industry.
+
             </p>
 
             <div className="grid md:grid-cols-3 bg-[#EFF6FF] gap-8 p-4 rounded-lg ">
               <div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">1K</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">5,000+
+                </div>
                 <div className="text-gray-600">Students Reached</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">1K</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">12,000+
+                </div>
                 <div className="text-gray-600">Graduates</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">10+</div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">4+</div>
                 <div className="text-gray-600">Years</div>
               </div>
             </div>

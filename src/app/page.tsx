@@ -6,7 +6,7 @@ import Testimonials from "@/components/UI/Testimonials";
 import { Button } from "@/components/UI/button"
 import { Input } from "@/components/UI/input"
 import Footer from "@/components/UI/Footer";
-import Faq from "@/components/UI/Faq";
+import Faq from "@/components/UI/Faq"; 
 import { Search } from "lucide-react"
 
 import Image from "next/image";
@@ -55,6 +55,7 @@ export default function Home() {
 
 
   return (
+    
     <div className="min-h-screen relative">
       {/* Navigation Header */}
       <NavbarWithDropdown /> 
@@ -64,11 +65,11 @@ export default function Home() {
       <div
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134161/rename_ldcybc.jpg')",
-        }}
+          backgroundImage: "url('https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134161/rename_ldcybc.jpg')", 
+        }}  
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/50"/> 
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
@@ -382,12 +383,13 @@ export default function Home() {
         </div>
 
           {/* Career advancement card */}
-          <div className="hidden lg:block absolute top-[331px] left-[78px] bg-white z-20 w-[362px] h-[95px] p-4 rounded shadow-lg border border-gray-100">
+          <div className="hidden lg:block absolute top-[331px] left-[78px] bg-white z-20 w-[362px] h-[105px] p-4 rounded shadow-lg border border-gray-100">
             <div className="text-[#2E323A] text-center font-montserrat font-bold text-sm md:text-base lg:text-[18px] leading-relaxed">
               Advance Your Career
             </div>
             <div className="text-[#1E1E1E] text-center font-jost font-bold text-xl md:text-2xl lg:text-[28px] leading-tight">
-              Become A Global Talent
+            Become a Global Tech Talent
+
             </div>
           </div>
         </section>
@@ -401,7 +403,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-jost font-bold mb-4" style={{ color: ' #14183E' }}>
-              Why We Are Good At What We Do
+            What Sets Us Apart
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               At SkillUp Global, we are redefining how Africans learn, work, and thrive in the digital age. 
