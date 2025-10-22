@@ -494,7 +494,7 @@ export default function BootcampPage() {
               <button 
               onClick={() => {
               setIsVisible(false);
-              window.location.href = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u";
+              window.location.href = "https://learnlive.site/";
             }}
               className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-6">
                 Enroll now
