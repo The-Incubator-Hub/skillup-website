@@ -117,7 +117,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
                  </Button>
 
             <Link 
-               href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u"
+               href="https://learnlive.site"
                 passHref
                >
               <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">
