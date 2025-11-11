@@ -121,7 +121,7 @@ export default function AboutPage() {
                 Tech Education Anywhere
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Whether you&apos;re starting fresh or advancing your career, SkillUp Global is your trusted partner for world-class tech education. We combine expert-led training, hands-on projects, and career support to shape the next generation of tech talent in Africa. From coding to data analytics, UI/UX design to cybersecurity, our programs are designed for real-world results helping you gain skills that open doors both locally and globally.
+                Whether you&apos;re starting fresh or advancing your career, SkillUp Edutech is your trusted partner for world-class tech education. We combine expert-led training, hands-on projects, and career support to shape the next generation of tech talent in Africa. From coding to data analytics, UI/UX design to cybersecurity, our programs are designed for real-world results helping you gain skills that open doors both locally and globally.
 
               </p>
             </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
               <div className="mb-8 md:flex md:justify-between">
                 <h2 className="text-5xl font-bold text-gray-900 mb-4 mt-22">Our History</h2>
                 <p className="text-gray-600 max-w-2xl">
-                At SkillUp Global, our mission is to clearly bridge Africa&apos;s digital divide and empower communities with the tools to thrive in a fast-evolving world. As one of Nigeria&apos;s leading digital skills bootcamps and online tech training providers, we&apos;ve impacted nearly 1,000 learners through our flagship programs.
+                At SkillUp Edutech, our mission is to clearly bridge Africa&apos;s digital divide and empower communities with the tools to thrive in a fast-evolving world. As one of Nigeria&apos;s leading digital skills bootcamps and online tech training providers, we&apos;ve impacted nearly 1,000 learners through our flagship programs.
 
 
                 </p>
