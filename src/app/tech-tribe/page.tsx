@@ -536,12 +536,12 @@ export default function BootcampPage() {
                   className="rounded-full"
                 />
                 <div>
-                  <p className="font-medium text-gray-900">SkillUp Global</p>
+                  <p className="font-medium text-gray-900">SkillUp Edutech</p>
                   <p className="text-sm text-gray-600">skilluplimited@gmail.com</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700">
-                Our mission is simple but powerful to bridge Africa&apos;s digital divide and empower individuals to thrive in today&apos;s fast-evolving tech world. Through our intensive, hands-on training, we&apos;ve already impacted nearly 1,000 learners across our flagship programs, helping them pivot into tech, grow their freelance businesses, or advance their careers. At SkillUp Global, we don&apos;t just teach skills we build confidence, portfolios, and pathways to real opportunities.
+                Our mission is simple but powerful to bridge Africa&apos;s digital divide and empower individuals to thrive in today&apos;s fast-evolving tech world. Through our intensive, hands-on training, we&apos;ve already impacted nearly 1,000 learners across our flagship programs, helping them pivot into tech, grow their freelance businesses, or advance their careers. At SkillUp Edutech, we don&apos;t just teach skills we build confidence, portfolios, and pathways to real opportunities.
               </p>
             </div>
 
