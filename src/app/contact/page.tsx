@@ -7,9 +7,7 @@ import { Input } from "@/components/UI/input";
 import { NavbarWithDropdown } from "@/components/UI/navigation";
 import Footer from "@/components/UI/Footer";
 import Faq from "@/components/UI/Faq";
-import Link from "next/link"; 
-import Image from "next/image"; 
-import { Mail, Phone, MapPin,X, Facebook, Twitter, Linkedin, Instagram, Dribbble,Youtube } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactSection(){ 
@@ -21,16 +19,44 @@ export default function ContactSection(){
     company: "",
     message: "",
   }) 
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here 
+    setStatus("submitting")
+
+    try {
+      const response = await fetch("/api/forms", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          formType: "contact",
+          data: formData,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Contact submission failed")
+      }
+
+      setStatus("success")
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        company: "",
+        message: "",
+      })
+    } catch {
+      setStatus("error")
+    }
   }
   return (
     <div className="min-h-screen relative">
@@ -53,7 +79,7 @@ export default function ContactSection(){
       {/* Main Content */} 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> 
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Have Question? Let&apos;s Connect.</h2>
+          <h2 className="text-5xl font-bold text-gray-900 mb-4">Have a Question? Let&apos;s Connect.</h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-2xl">
             We&apos;d love to hear from you. Whether you&apos;re interested in our digital skills bootcamps, exploring online tech training in Nigeria, or looking to partner in building tech talent in Africa. Share your ideas, projects, or inquiries, and our team will get back to you promptly.
           </p>
@@ -143,6 +169,7 @@ export default function ContactSection(){
                     value={formData.name}
                     onChange={handleInputChange}
                     className="w-full"
+                    required
                   />
                 </div>
                 <div>
@@ -157,6 +184,7 @@ export default function ContactSection(){
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full"
+                    required
                   />
                 </div>
               </div>
@@ -173,6 +201,7 @@ export default function ContactSection(){
                   value={formData.subject}
                   onChange={handleInputChange}
                   className="w-full"
+                  required
                 />
               </div>
 
@@ -208,10 +237,21 @@ export default function ContactSection(){
 
               <Button
                 type="submit"
+                disabled={status === "submitting"}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors w-full sm:w-auto"
               >
-                Send Message
+                {status === "submitting" ? "Sending..." : "Send Message"}
               </Button>
+              {status === "success" && (
+                <p className="text-sm font-medium text-green-700">
+                  Your message has been received. Our team will get back to you shortly.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-sm font-medium text-red-700">
+                  We could not send your message. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -6,14 +6,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar";
   const testimonials = [
     {
       id: 1,
-      text: "Before joining SkillUp, I had no clear path into tech. The program's hands-on projects and mentorship gave me the skills and confidence to land my first data analyst role in less than six months. Learning tech in Africa has never felt this practical and empowering.",
+      text: "Before joining SkillUp Global, I had no clear path into tech. The program's hands-on projects and mentorship gave me the skills and confidence to land my first data analyst role in less than six months. Learning tech in Africa has never felt this practical and empowering.",
       author: "Caroline Moren",
       role: "Data Analyst",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
       id: 2,
-      text: "I went from being a self-taught coder struggling to get noticed, to a full-time developer with a global client base. SkillUp's digital skills bootcamp isn't just training, it's a career launchpad.",
+      text: "I went from being a self-taught coder struggling to get noticed, to a full-time developer with a global client base. SkillUp Global's digital skills bootcamp isn't just training, it's a career launchpad.",
       author: "Adebayo Kareem",
       role: "Frontend Developer",
       avatar: "/placeholder.svg?height=40&width=40",
@@ -27,35 +27,35 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/UI/avatar";
     },
     {
       id: 4,
-      text: "SkillUp connects you to the right people, tools, and opportunities. I didn't just learn, I became part of a pan-African network of innovators and tech leaders.",
+      text: "SkillUp Global connects you to the right people, tools, and opportunities. I didn't just learn, I became part of a pan-African network of innovators and tech leaders.",
       author: "Samuel Otieno",
       role: "Data Engineer",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
       id: 5,
-      text: "I joined SkillUp to switch careers, and within weeks of completing the digital skills bootcamp, I landed my first digital marketing role. The blend of practical training and career support is unmatched in Africa.",
+      text: "I joined SkillUp Global to switch careers, and within weeks of completing the digital skills bootcamp, I landed my first digital marketing role. The blend of practical training and career support is unmatched in Africa.",
       author: "Funke Ajayi",
       role: "Digital Marketer",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
       id: 6,
-      text: "The projects I built during SkillUp's online tech training in Nigeria impressed my future employer. I now work remotely for a tech company in Europe, proving that African talent can compete globally.",
+      text: "The projects I built during SkillUp Global's online tech training in Nigeria impressed my future employer. I now work remotely for a tech company in Europe, proving that African talent can compete globally.",
       author: "Ahmed Musa",
       role: "Full Stack Developer",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
       id: 7,
-      text: "SkillUp didn't just teach me data science, they gave me the portfolio, confidence, and connections to break into the industry. I'm proud to be part of a growing movement of tech talent in Africa.",
+      text: "SkillUp Global didn't just teach me data science, they gave me the portfolio, confidence, and connections to break into the industry. I'm proud to be part of a growing movement of tech talent in Africa.",
       author: "Linda Nwosu",
       role: "Data Scientist",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
       id: 8,
-      text: "I had the passion but no roadmap. With SkillUp, I gained in-demand cybersecurity skills, real job placement support, and a pan-African community that pushes me to grow every day.",
+      text: "I had the passion but no roadmap. With SkillUp Global, I gained in-demand cybersecurity skills, real job placement support, and a pan-African community that pushes me to grow every day.",
       author: "David Mensah",
       role: "Cybersecurity Specialist",
       avatar: "/placeholder.svg?height=40&width=40",
@@ -144,21 +144,21 @@ export default function Testimonials() {
                 <div className="flex items-center gap-8 md:gap-12">
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-[#14183E] mb-1">
-                      <FlipNumber value={1000} />+
+                      <FlipNumber value={828} />
                     </div>
-                    <div className="text-gray-600 text-sm">Students Reached</div>
+                    <div className="text-gray-600 text-sm">Learners Reached</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-[#14183E] mb-1">
-                      <FlipNumber value={1000} />+
+                      <FlipNumber value={3} />
                     </div>
-                    <div className="text-gray-600 text-sm">Graduates</div>
+                    <div className="text-gray-600 text-sm">Communities</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl md:text-4xl font-bold text-[#14183E] mb-1">
-                      <FlipNumber value={10} />+
+                      <FlipNumber value={5} />
                     </div>
-                    <div className="text-gray-600 text-sm">Tutors</div>
+                    <div className="text-gray-600 text-sm">Learning Tracks</div>
                   </div>
                 </div>
               </div>
@@ -167,4 +167,4 @@ export default function Testimonials() {
         </div>
       </section>              
     )
-} 
+}

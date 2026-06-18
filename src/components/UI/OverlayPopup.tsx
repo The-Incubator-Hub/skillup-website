@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { APPLICATION_FORM_PATH } from "@/lib/forms";
 
 export default function OverlayPopup() {
   const [isVisible, setIsVisible] = useState(false) 
@@ -18,7 +20,7 @@ export default function OverlayPopup() {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[99999] p-4">
       {/* Popup container */}
-      <div className="relative bg-white rounded-lg shadow-lg flex flex-col lg:flex-row w-full max-w-[1095px] max-h-[90vh] overflow-hidden">
+        <div className="relative bg-white rounded-lg shadow-lg flex flex-col lg:flex-row w-full max-w-[1095px] max-h-[90vh] overflow-hidden">
         {/* Close button */}
         <button
           onClick={() => setIsVisible(false)}
@@ -44,8 +46,8 @@ export default function OverlayPopup() {
           <div className="absolute inset-2 sm:inset-4 lg:inset-0 z-2">
             <div className="relative w-full h-full lg:w-[370px] lg:h-[590px] lg:top-[15px] lg:left-[19px] rounded-lg overflow-hidden">
               <Image
-                src="/images/popup_img.png"
-                alt="Tech Tribe"
+                src="/images/popup_img.jpg"
+                alt="Tech Trybe Plus learners"
                 fill
                 className="object-cover rounded-lg"
                 priority
@@ -66,27 +68,28 @@ export default function OverlayPopup() {
 
         {/* Right Section */} 
         <div className="flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 flex-1 lg:w-[508px] gap-4 sm:gap-6 lg:gap-8">
+          <p className="rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">
+            Tech Trybe Plus
+          </p>
           <h1 className="font-jost font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-[56px] leading-tight lg:leading-[120%] text-[#101828] max-w-full lg:max-w-[461px]">
-          Register for Tech Trybe
+          Apply for the next cohort
           </h1>
 
           
 
           <p className="font-inter text-center text-sm sm:text-base lg:text-[16px] leading-relaxed lg:leading-[24px] text-[#344054] max-w-full lg:max-w-[460px]">
-           Get Your money’s worth
-           Whether you’re a career switcher, freelancer, or young professional, 
-           Tech Trybe will equip you with the tools to thrive in today’s digital economy.
+            Build practical, job-ready skills through a 3-month learning pipeline with live sync sessions, LMS content, mentorship, and project work.
           </p>
 
-          <button
+          <Link
+            href={APPLICATION_FORM_PATH}
             onClick={() => {
               setIsVisible(false);
-              window.location.href = "https://learnlive.site/";
             }}
-            className="bg-[#1E3B8A] text-white font-inter font-medium rounded-md hover:bg-blue-700 transition-all duration-300 w-full max-w-[444px] h-12 sm:h-14 lg:h-[56px] px-6 sm:px-8 text-sm sm:text-base"
+            className="inline-flex items-center justify-center bg-[#1E3B8A] text-white font-inter font-medium rounded-md hover:bg-blue-700 transition-all duration-300 w-full max-w-[444px] h-12 sm:h-14 lg:h-[56px] px-6 sm:px-8 text-sm sm:text-base"
           >
-            Enroll Now
-          </button>
+            Start Application
+          </Link>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="mb-6 flex items-center">
                 <Image
                   src="/images/skillUp.png"
-                  alt="REASTUR"
+                  alt="SkillUp Global Logo"
                   width={98}
                   height={20}
                   className="object-contain text-black"

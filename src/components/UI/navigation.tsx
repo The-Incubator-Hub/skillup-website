@@ -6,6 +6,7 @@ import { ChevronDown, Menu, X } from "lucide-react"
 import { Button } from "@/components/UI/button"
 import Image from "next/image"
 import Link from "next/link"
+import { APPLICATION_FORM_PATH } from "@/lib/forms"
 
 interface NavbarWithDropdownProps {
   className?: string
@@ -54,7 +55,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
               >
                 <Image
                   src="/images/skillUp.png"
-                  alt="SkillUp Logo"
+                  alt="SkillUp Global Logo"
                   width={110}
                   height={24}
                   className="object-contain"
@@ -117,7 +118,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
                  </Button>
 
             <Link 
-               href="https://learnlive.site"
+               href={APPLICATION_FORM_PATH}
                 passHref
                >
               <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">
@@ -201,7 +202,7 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
               </Button>
 
               <Link 
-               href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=TCXhY7Vn2k6hjUKOEi376VkaEKgVIcNBhNb9TXKt06lUQ1BVQTVOVjVMTE4wMklGVjlUSUVDOFdOQi4u"
+               href={APPLICATION_FORM_PATH}
                 passHref
                >
               <Button className="text-white bg-blue-900 hover:bg-blue-700 w-full">

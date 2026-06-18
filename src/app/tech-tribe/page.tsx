@@ -3,8 +3,9 @@ import { NavbarWithDropdown } from "@/components/UI/navigation"
 import Footer from "@/components/UI/Footer"
 import { Monitor, Video, Link, CheckCircle, Star, ChevronDown, ChevronUp, Clock, Users, Award, Globe } from "lucide-react"
 import Image from "next/image"
-import { useState,useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/UI/button"
+import { APPLICATION_FORM_PATH } from "@/lib/forms"
 import {
   Bookmark,
   ExternalLink,
@@ -275,20 +276,6 @@ export default function BootcampPage() {
     setCurrentSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
   };
 
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    // Delay popup slightly to ensure it loads after page hydration
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 300)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (!isVisible) return null
-
-
   return (
     <div className="min-h-screen relative bg-white flex flex-col ">
       <NavbarWithDropdown />
@@ -297,7 +284,7 @@ export default function BootcampPage() {
       <div className="border-b border-gray-200 px-4 sm:px-6 py-4">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Tech Tribe Bootcamp</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Tech Trybe Bootcamp</h1>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -325,8 +312,8 @@ export default function BootcampPage() {
             {/* Hero Image */}
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/Tech.png"
-                alt="Tech Tribe Bootcamp - Students working on laptops"
+                src="/images/Tech.jpg"
+                alt="Tech Trybe Bootcamp - Students working on laptops"
                 width={800}
                 height={400}
                 className="w-full h-48 sm:h-64 lg:h-auto object-cover"
@@ -336,9 +323,9 @@ export default function BootcampPage() {
 
             {/* About Section */}
             <section>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">About Tech Tribe</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">About Tech Trybe</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                TechTrybe Bootcamp is a 6-week, fully virtual, instructor-led program designed for graduates, young professionals, and mid-level talent.
+                Tech Trybe Bootcamp is a 6-week, fully virtual, instructor-led program designed for graduates, young professionals, and mid-level talent.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Through live classes, mentorship, and career support, you&apos;ll gain job-ready digital skills, build a standout portfolio, and position yourself to upskill, pivot, or accelerate your career in today&apos;s most in-demand digital fields.
@@ -493,8 +480,7 @@ export default function BootcampPage() {
             <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 shadow-sm sticky top-6">
               <button 
               onClick={() => {
-              setIsVisible(false);
-              window.location.href = "https://learnlive.site/";
+              window.location.href = APPLICATION_FORM_PATH;
             }}
               className="w-full bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 mb-6">
                 Enroll now
@@ -536,12 +522,12 @@ export default function BootcampPage() {
                   className="rounded-full"
                 />
                 <div>
-                  <p className="font-medium text-gray-900">SkillUp Edutech</p>
+                  <p className="font-medium text-gray-900">SkillUp Global</p>
                   <p className="text-sm text-gray-600">skilluplimited@gmail.com</p>
                 </div>
               </div>
               <p className="text-sm text-gray-700">
-                Our mission is simple but powerful to bridge Africa&apos;s digital divide and empower individuals to thrive in today&apos;s fast-evolving tech world. Through our intensive, hands-on training, we&apos;ve already impacted nearly 1,000 learners across our flagship programs, helping them pivot into tech, grow their freelance businesses, or advance their careers. At SkillUp Edutech, we don&apos;t just teach skills we build confidence, portfolios, and pathways to real opportunities.
+                Our mission is simple but powerful to bridge Africa&apos;s digital divide and empower individuals to thrive in today&apos;s fast-evolving tech world. Through our intensive, hands-on training, we&apos;ve already impacted 828 learners across our flagship programs, helping them pivot into tech, grow their freelance businesses, or advance their careers. At SkillUp Global, we don&apos;t just teach skills we build confidence, portfolios, and pathways to real opportunities.
               </p>
             </div>
 

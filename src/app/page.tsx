@@ -217,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Skillup Section */}
+      {/* Why Choose SkillUp Global Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
@@ -248,7 +248,7 @@ export default function Home() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-                Why Choose Skillup?
+                Why Choose SkillUp Global?
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 md:mb-8">
                 Our programs are designed to help you gain in-demand digital skills, connect with real job opportunities, and thrive in the global digital economy.
@@ -318,83 +318,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Professional Certificates Section */}
-      <div className="relative w-full h-[400px] md:h-[500px] lg:h-[651px] bg-white">
-        <section className="relative w-full h-full overflow-hidden">
-          {/* Main background image */}
-          <Image
-            src="/images/studentss.JPG"
-            alt="Group of professionals walking together"
-            fill
-            className="object-cover object-top z-0"
-            priority
-          />
-
-        {/* Dark overlay */}
-           <div className="absolute inset-0 bg-[#1018284D] z-10 pointer-events-none" />
-
-
-          {/* Main heading */}
-          <div className="absolute inset-0 z-30 flex items-start justify-center pt-8 md:pt-16 lg:pt-[143px] px-4">
-            <h1 className="w-full max-w-[1200px] text-2xl md:text-4xl lg:text-[56px] leading-tight lg:leading-[1.2] text-center font-jost font-bold text-white">
-              Online Professional Certificates in High-Demand Tech Skills
-            </h1>
-          </div>
-
-        {/* Bottom section with content and CTA */}
-        <div className="absolute bottom-0 left-0 w-full h-[200px] md:h-[240px] lg:h-[282px] z-20">
-          
-          {/* Bottom overlay */}
-              <div className="absolute inset-0 bg-[#000000]/50 z-10 pointer-events-none" /> 
-
-            {/* Bottom background image */}
-            <Image
-              src="/images/first_overlay.jpg"
-              alt="Students collaborating and studying together"
-              fill
-              className="object-cover opacity-60 z-0"
-            />
-
-            {/* Content container */}
-            <div className="absolute inset-0 z-30 flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-[82px] py-6 lg:py-[105px] gap-4 lg:gap-8">
-              {/* Description text */}
-              <p className="flex-1 max-w-[926px] font-montserrat font-bold text-sm md:text-base lg:text-[18px] leading-relaxed text-white text-center lg:text-left">
-                Get the skills that employers in Africa and around the world are 
-                looking for. At SkillUp, our digital skills bootcamps and online tech 
-                training are designed to take you from beginner to job-ready professional. 
-                Learn from industry experts, work on real-world projects, and join a growing 
-                network of tech talent in Africa ready to shape the future.
-              </p>
-
-            {/* CTA Button */}
-             <button
-              // onClick={handleExploreCoursesClick}
-              className="flex-shrink-0 w-full max-w-[221px] h-12 lg:h-[56px] 
-              bg-white border-2 border-[#1E3A8A] rounded-md px-6 lg:px-8 py-3 lg:py-4 
-              text-[#1E3A8A] hover:bg-blue-900 hover:text-white 
-              active:bg-blue-800 active:text-white
-              text-sm lg:text-base font-semibold text-center 
-              transition-all duration-300 ease-in hover:opacity-80 active:scale-95 
-              cursor-pointer pointer-events-auto z-40"
-            >
-              Explore Courses
-            </button>
-          </div>
-        </div>
-
-          {/* Career advancement card */}
-          <div className="hidden lg:block absolute top-[331px] left-[78px] bg-white z-20 w-[362px] h-[105px] p-4 rounded shadow-lg border border-gray-100">
-            <div className="text-[#2E323A] text-center font-montserrat font-bold text-sm md:text-base lg:text-[18px] leading-relaxed">
-              Advance Your Career
-            </div>
-            <div className="text-[#1E1E1E] text-center font-jost font-bold text-xl md:text-2xl lg:text-[28px] leading-tight">
-            Become a Global Tech Talent
-
-            </div>
-          </div>
-        </section>
-      </div>
-
       <CoursesProgramsSection />
 
       {/* Why We Are Good At What We Do Section */}
@@ -460,15 +383,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Third Vertical Container: 12+ Online Courses + Image */}  
+            {/* Third Vertical Container: Learning tracks + image */}
             <div className="flex flex-col gap-6">
               <div className="bg-blue-200 rounded-2xl p-8 flex flex-col justify-center">
                 <div className="flex items-center mb-4">
                   <Folder className="w-8 h-8 text-blue-900 mr-3" />
-                  <h3 className="text-xl font-jost font-bold "  style={{ color: '#1E1E1E' }}>12+ Online Courses</h3>
+                  <h3 className="text-xl font-jost font-bold "  style={{ color: '#1E1E1E' }}>Focused Learning Tracks</h3>
                 </div>
                 <p className=" leading-relaxed font-montserrat" style={{ color: ' #757575' }}>
-                  From software development to data analytics, UX design to digital marketing, our 12+ online programs are designed to take you from beginner to hire-ready. Whether you&apos;re upskilling for your current job or breaking into a new career, our online tech training in Nigeria gives you the tools to compete on a global stage.
+                  From software development to data analytics, product design, project management, and AI, our learning tracks are designed to take you from beginner to hire-ready. Whether you&apos;re upskilling for your current job or breaking into a new career, our online tech training in Nigeria gives you the tools to compete on a global stage.
 
                 </p>
               </div>

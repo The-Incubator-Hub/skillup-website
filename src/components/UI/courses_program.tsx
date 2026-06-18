@@ -10,6 +10,7 @@ import {
   ChevronLeft, 
   ChevronRight,
 } from "lucide-react";
+import { APPLICATION_FORM_PATH } from "@/lib/forms";
     
 // =====================
 // TYPE DEFINITIONS
@@ -104,23 +105,23 @@ export default function CoursesProgramsSection() {
 
   const programsData: Program[] = [
     {
-      title: "Tech Trybe Bootcamp",
+      title: "Tech Trybe Plus",
       description:
-        "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage",
-      duration: "6 weeks",
-      projects: "Practical, mentor-led sessions + project-based learning",
-      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134179/tribe_ycwxxg.jpg",
-      waitlistCount: 50,
+        "A structured 3-month programme for serious learners ready to build job-ready skills, complete practical projects, and grow with mentorship from SkillUp Global.",
+      duration: "3 months",
+      projects: "LMS learning + live sync sessions + capstone project",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134122/ai_now_wtzyup.jpg",
+      waitlistCount: 828,
       profileImages: ["/images/pic.png", "/images/pic.png", "/images/pic.png"],
      
     },
     {
-      title: "Tech Trybe Plus",
+      title: "Tech Trybe Bootcamp",
       description:
-        "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage.  In 12 weeks, you’ll work on real-world projects, collaborate with mentors, and unlock career opportunities in the booming digital economy.",
-      duration: "12 weeks",
+        "Master in-demand digital skills and gain hands-on experience that gets you job-ready. Perfect for beginners and career switchers who want to learn tech in Africa and compete on a global stage.",
+      duration: "6 weeks",
       projects: "Practical, mentor-led sessions + project-based learning",
-      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134122/ai_now_wtzyup.jpg",
+      image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134179/tribe_ycwxxg.jpg",
       waitlistCount: 32,
       profileImages: ["/images/pic.png", "/images/pic.png", "/images/pic.png"],
     },
@@ -304,7 +305,12 @@ function CourseCard({ course }: { course: Course }) {
           <div className="text-blue-900 font-bold text-lg lg:text-[20px]">
             {course.price}
           </div>
-          <button className="bg-white border-2 border-blue-600 hover:bg-blue-900 text-black hover:text-white text-sm lg:text-[20px] px-4 lg:px-6 py-3 rounded-md transition-all">
+          <button
+            onClick={() => {
+              window.location.href = APPLICATION_FORM_PATH;
+            }}
+            className="bg-white border-2 border-blue-600 hover:bg-blue-900 text-black hover:text-white text-sm lg:text-[20px] px-4 lg:px-6 py-3 rounded-md transition-all"
+          >
             Enroll now
           </button>
         </div>
@@ -319,10 +325,8 @@ function CourseCard({ course }: { course: Course }) {
 function ProgramCard({ program, index }: ProgramCardProps) {
   const handleWaitlistClick = () => {
   if (index === 0) {
-    // TechTribe program - redirect to specific page
-    window.location.href = "https://learnlive.site/";
+    window.location.href = APPLICATION_FORM_PATH;
   } else {
-    // AI NOW or other programs - show coming soon or different action
     alert("Coming Soon! We'll notify you when this program opens for enrollment.");
   }
 };
@@ -391,7 +395,7 @@ function ProgramCard({ program, index }: ProgramCardProps) {
               ))}
             </div>
             <span className="ml-3 text-sm text-gray-700">
-              {program.waitlistCount} people on waitlist
+              {program.waitlistCount} learners impacted
             </span>
           </div>
 
@@ -399,7 +403,7 @@ function ProgramCard({ program, index }: ProgramCardProps) {
           <button 
           onClick={handleWaitlistClick}
           className="bg-white border-2 border-blue-600 hover:bg-blue-900 text-black hover:text-white text-sm lg:text-[20px] px-4 lg:px-6 py-3 rounded-md transition-all">
-            Join Waitlist Now
+            {index === 0 ? "Apply Now" : "Join Waitlist Now"}
           </button>
         </div>
       </div>
