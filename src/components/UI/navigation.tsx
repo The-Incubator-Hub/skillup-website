@@ -5,13 +5,24 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/UI/button"
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { APPLICATION_FORM_PATH } from "@/lib/forms"
 
 interface NavbarWithDropdownProps {
   className?: string
 }
+
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About Us" },
+  { href: "/tech-trybe", label: "Tech Trybe" },
+  { href: APPLICATION_FORM_PATH, label: "SkillUp Plus" },
+  { href: "/contact", label: "Contact us" },
+]
+
 export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -41,19 +52,23 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
           </Link>
 
           {/* Desktop Navigation Menu */}
-          <div className="hidden flex-1 items-center justify-center gap-8 md:flex">
-            <Link href="/" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-700">
-              Home
-            </Link>
-            <Link href="/about" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-700">
-              About Us
-            </Link>
-            <Link href="/tech-trybe" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-700">
-              Tech Trybe
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-700">
-              Contact us
-            </Link>
+          <div className="hidden flex-1 items-center justify-center gap-5 md:flex lg:gap-8">
+            {navLinks.map((item) => {
+              const isActive = pathname === item.href
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`whitespace-nowrap text-sm font-medium transition-colors hover:text-blue-700 ${
+                    isActive ? "text-blue-800" : "text-gray-700"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            })}
           </div>
 
           {/* Desktop Action Buttons */}
@@ -99,40 +114,23 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
           }`}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
-            {/* Individuals */}
-            <Link
-              href="/"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-            >
-              <span>Home</span>
-            </Link>
+            {navLinks.map((item) => {
+              const isActive = pathname === item.href
 
-            {/* Corporates */}
-            <Link
-              href="/about"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-            >
-              <span>About Us</span>
-            </Link>
-
-
-            {/* Company */}
-            <Link
-              href="/tech-trybe"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-            >
-              <span>Tech Trybe</span>
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-            >
-              <span>Contact us</span>
-            </Link>
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`flex w-full items-center justify-between rounded-md px-3 py-2 text-base font-medium transition-colors hover:bg-gray-50 hover:text-blue-600 ${
+                    isActive ? "bg-blue-50 text-blue-800" : "text-gray-700"
+                  }`}
+                >
+                  <span>{item.label}</span>
+                </Link>
+              )
+            })}
           
             {/* Mobile Action Buttons */}
             <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">

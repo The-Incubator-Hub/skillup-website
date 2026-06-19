@@ -1,8 +1,7 @@
 "use client";
 
 import { useMemo, useState, type FormEvent } from "react";
-import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Clock3, Laptop, Loader2, ShieldCheck, Users } from "lucide-react";
+import { CheckCircle2, Clock3, Laptop, Loader2, ShieldCheck, Users } from "lucide-react";
 import { NavbarWithDropdown } from "@/components/UI/navigation";
 import Footer from "@/components/UI/Footer";
 
@@ -462,11 +461,7 @@ export default function SkillUpPlusApplicationPage() {
         <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 py-14 text-white md:py-16">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)] lg:items-center lg:px-8">
             <div>
-              <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-blue-100 hover:text-white">
-                <ArrowLeft className="h-4 w-4" />
-                Back to SkillUp Edtech
-              </Link>
-              <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">
                 SkillUp Plus
               </p>
               <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
