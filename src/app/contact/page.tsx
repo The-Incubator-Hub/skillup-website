@@ -60,11 +60,11 @@ export default function ContactSection(){
   }
   return (
     <div className="min-h-screen relative">
-      <NavbarWithDropdown className="fixed top-0 left-0 w-full z-50 bg-white shadow-md" />  
+      <NavbarWithDropdown />
            
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 py-16 px-6 pt-32">
-        <div className="max-w-4xl pl-12">
+      <div className="bg-gradient-to-r from-blue-900 to-blue-800 pb-16 pt-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Line + Text */}
           <div className="flex items-center space-x-3 mb-2">
             <span className="w-12 h-[1px] bg-white"></span>
@@ -72,15 +72,15 @@ export default function ContactSection(){
           </div>
 
           {/* Heading */} 
-          <h1 className="text-white text-4xl md:text-5xl font-bold">Reach Out To Us</h1>    
+          <h1 className="text-4xl font-bold text-white md:text-5xl">Reach Out To Us</h1>
         </div>   
       </div>           
 
       {/* Main Content */} 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> 
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">Have a Question? Let&apos;s Connect.</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-2xl">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 md:text-5xl">Have a Question? Let&apos;s Connect.</h2>
+          <p className="text-base leading-7 text-gray-600 max-w-2xl mx-auto md:text-xl">
             We&apos;d love to hear from you. Whether you&apos;re interested in our digital skills bootcamps, exploring online tech training in Nigeria, or looking to partner in building tech talent in Africa. Share your ideas, projects, or inquiries, and our team will get back to you promptly.
           </p>
         </div>

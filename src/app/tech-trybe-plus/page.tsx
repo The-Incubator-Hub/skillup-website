@@ -458,9 +458,9 @@ export default function TechTrybePlusApplicationPage() {
     <div className="min-h-screen bg-[#F8FAFC] text-gray-900">
       <NavbarWithDropdown />
 
-      <main className="pt-24">
-        <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 px-4 py-16 text-white">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <main className="pt-[72px]">
+        <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 py-14 text-white md:py-16">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.12fr)_minmax(320px,0.88fr)] lg:items-center lg:px-8">
             <div>
               <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-blue-100 hover:text-white">
                 <ArrowLeft className="h-4 w-4" />
@@ -469,7 +469,7 @@ export default function TechTrybePlusApplicationPage() {
               <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">
                 Tech Trybe Plus
               </p>
-              <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-6xl">
+              <h1 className="mt-4 max-w-3xl text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
                 Apply for the next SkillUp Global intensive cohort.
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-8 text-blue-50 md:text-lg">
@@ -477,7 +477,7 @@ export default function TechTrybePlusApplicationPage() {
               </p>
             </div>
 
-            <div className="grid gap-4 rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
+            <div className="grid gap-4 rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur md:p-6">
               <div className="flex items-start gap-3">
                 <Clock3 className="mt-1 h-5 w-5 text-orange-200" />
                 <div>
@@ -503,8 +503,8 @@ export default function TechTrybePlusApplicationPage() {
           </div>
         </section>
 
-        <section className="px-4 py-12">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[280px_1fr]">
+        <section className="py-10 md:py-12">
+          <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[300px_minmax(0,1fr)] lg:px-8">
             <aside className="h-fit rounded-lg border border-blue-100 bg-white p-5 shadow-sm lg:sticky lg:top-24">
               <p className="text-sm font-semibold text-blue-900">Application progress</p>
               <div className="mt-4 h-2 overflow-hidden rounded-full bg-blue-100">
@@ -532,14 +532,14 @@ export default function TechTrybePlusApplicationPage() {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {formSections.map((section) => (
-                <section key={section.title} className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm md:p-8">
+                <section key={section.title} className="rounded-lg border border-blue-100 bg-white p-5 shadow-sm sm:p-6 md:p-8">
                   <p className="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700">{section.eyebrow}</p>
                   <div className="mt-2 max-w-3xl">
                     <h2 className="text-2xl font-bold text-gray-950">{section.title}</h2>
                     <p className="mt-2 text-sm leading-6 text-gray-600">{section.description}</p>
                   </div>
 
-                  <div className="mt-8 grid gap-5 md:grid-cols-2">
+                  <div className="mt-8 grid gap-x-6 gap-y-5 md:grid-cols-2">
                     {section.fields.map((field) => (
                       <div
                         key={field.name}
@@ -559,21 +559,23 @@ export default function TechTrybePlusApplicationPage() {
                 </section>
               ))}
 
-              <div className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+              <div className="flex flex-col gap-4 rounded-lg border border-blue-100 bg-white p-5 shadow-sm sm:p-6 md:flex-row md:items-center md:justify-between">
+                <div className="min-h-6 flex-1">
                 {status === "success" && (
-                  <div className="mb-4 rounded-md bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
+                  <div className="rounded-md bg-green-50 px-4 py-3 text-sm font-medium text-green-700">
                     Your Tech Trybe Plus application has been received.
                   </div>
                 )}
                 {status === "error" && (
-                  <div className="mb-4 rounded-md bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+                  <div className="rounded-md bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
                     We could not submit the form. Please try again.
                   </div>
                 )}
+                </div>
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-blue-800 px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-blue-800 px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto md:min-w-[190px]"
                 >
                   {status === "submitting" && <Loader2 className="h-4 w-4 animate-spin" />}
                   Submit application

@@ -145,7 +145,7 @@ export default function CoursesProgramsSection() {
 
   return (
     <section className="py-20 bg-blue-50">
-      <div className="container mx-auto px-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading + Toggle */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
           <h2 className="font-bold text-2xl md:text-3xl lg:text-[40px] leading-[120%] text-[#14183E]">

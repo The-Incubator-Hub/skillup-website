@@ -96,8 +96,8 @@ export default function AboutPage() {
     <div className="min-h-screen bg-white">
       <NavbarWithDropdown />
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 py-16 px-6 pt-32">
-        <div className="max-w-4xl pl-12">
+      <div className="bg-gradient-to-r from-blue-900 to-blue-800 pb-16 pt-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Line + Text */}
           <div className="flex items-center space-x-3 mb-2">
             <span className="w-12 h-[1px] bg-white"></span>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-white text-4xl md:text-5xl font-bold">Discover how we improve lives through technology and skills.</h1>
+          <h1 className="max-w-4xl text-4xl font-bold text-white md:text-5xl">Discover how we improve lives through technology and skills.</h1>
         </div>
       </div>
 
