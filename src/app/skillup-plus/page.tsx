@@ -484,7 +484,7 @@ export default function SkillUpPlusApplicationPage() {
                 <Laptop className="mt-1 h-5 w-5 text-orange-200" />
                 <div>
                   <p className="font-semibold">Practical track selection</p>
-                  <p className="text-sm text-blue-100">Choose Cybersecurity, Data Analysis, Product Design, Software Development, or AI.</p>
+                  <p className="text-sm text-blue-100">Choose Cybersecurity, Data Analysis, Product Design, Software Development, or AI for Professionals.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
