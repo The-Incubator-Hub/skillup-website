@@ -64,7 +64,7 @@ const formSections: FormSection[] = [
         label: "Gender",
         type: "select",
         required: true,
-        options: ["Female", "Male", "Prefer not to say"],
+        options: ["Female", "Male"],
       },
       {
         name: "email",
