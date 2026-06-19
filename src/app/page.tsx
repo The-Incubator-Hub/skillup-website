@@ -549,17 +549,12 @@ export default function Home() {
             tips, and success stories shaping the future of tech talent in Africa.
           </p>
 
-    {/* Input and Button */}
-    <div className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-[620px] mt-6 z-10">
-      <input
-        type="email"
-        placeholder="you@example.com"
-        className="w-full sm:w-[434px] h-[48px] px-4 rounded-full border border-[#D9D9D9] bg-white text-gray-500 focus:outline-none"
-      />
-      <button className="bg-[#1F2227] text-white font-inter text-[16px] font-medium rounded-md px-6 py-3 hover:bg-black transition w-full sm:w-[174px]">
-        Explore Courses 
-      </button> 
-    </div>
+          <Link
+            href="/contact"
+            className="z-10 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-8 py-3 text-base font-semibold text-blue-900 shadow-sm transition hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-white/70 focus:ring-offset-2 focus:ring-offset-blue-900"
+          >
+            Contact Us
+          </Link>
     
   </div>
   
