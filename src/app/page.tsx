@@ -217,7 +217,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose SkillUp Global Section */}
+      {/* Why Choose SkillUp Edtech Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
@@ -248,7 +248,7 @@ export default function Home() {
 
             <div className="order-1 lg:order-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
-                Why Choose SkillUp Global?
+                Why Choose SkillUp Edtech?
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 md:mb-8">
                 Our programs are designed to help you gain in-demand digital skills, connect with real job opportunities, and thrive in the global digital economy.
@@ -329,7 +329,7 @@ export default function Home() {
             What Sets Us Apart
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              At SkillUp Global, we are redefining how Africans learn, work, and thrive in the digital age. 
+              At SkillUp Edtech, we are redefining how Africans learn, work, and thrive in the digital age.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
-export const APPLICATION_FORM_PATH = "/tech-trybe-plus";
+export const APPLICATION_FORM_PATH = "/skillup-plus";
 
 export const FORM_SHEETS = {
-  techTrybePlus: "Tech Trybe Plus Applications",
+  skillUpPlus: "SkillUp Plus Applications",
   contact: "Contact Messages",
 } as const;
 

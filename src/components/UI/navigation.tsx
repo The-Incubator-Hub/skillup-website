@@ -27,12 +27,12 @@ export function NavbarWithDropdown({ className = "" }: NavbarWithDropdownProps) 
 
           <Link
             href="/"
-            aria-label="Go to SkillUp Global home"
+            aria-label="Go to SkillUp Edtech home"
             className="flex h-12 min-w-[128px] items-center transition-transform duration-200 hover:scale-105 md:min-w-[212px] lg:min-w-[236px]"
           >
             <Image
               src="/images/skillUp.png"
-              alt="SkillUp Global Logo"
+              alt="SkillUp Edtech Logo"
               width={118}
               height={28}
               className="object-contain"

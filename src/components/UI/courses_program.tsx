@@ -105,9 +105,9 @@ export default function CoursesProgramsSection() {
 
   const programsData: Program[] = [
     {
-      title: "Tech Trybe Plus",
+      title: "SkillUp Plus",
       description:
-        "A structured 3-month programme for serious learners ready to build job-ready skills, complete practical projects, and grow with mentorship from SkillUp Global.",
+        "A structured 3-month programme for serious learners ready to build job-ready skills, complete practical projects, and grow with mentorship from SkillUp Edtech.",
       duration: "3 months",
       projects: "LMS learning + live sync sessions + capstone project",
       image: "https://res.cloudinary.com/dq2jag0q6/image/upload/v1756134122/ai_now_wtzyup.jpg",

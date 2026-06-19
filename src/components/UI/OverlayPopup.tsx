@@ -47,7 +47,7 @@ export default function OverlayPopup() {
             <div className="relative w-full h-full lg:w-[370px] lg:h-[590px] lg:top-[15px] lg:left-[19px] rounded-lg overflow-hidden">
               <Image
                 src="/images/popup_img.jpg"
-                alt="Tech Trybe Plus learners"
+                alt="SkillUp Plus learners"
                 fill
                 className="object-cover rounded-lg"
                 priority
@@ -69,7 +69,7 @@ export default function OverlayPopup() {
         {/* Right Section */} 
         <div className="flex flex-col items-center justify-center p-4 sm:p-6 lg:p-8 flex-1 lg:w-[508px] gap-4 sm:gap-6 lg:gap-8">
           <p className="rounded-full bg-blue-50 px-4 py-2 text-sm font-semibold uppercase tracking-[0.16em] text-blue-800">
-            Tech Trybe Plus
+            SkillUp Plus
           </p>
           <h1 className="font-jost font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-[56px] leading-tight lg:leading-[120%] text-[#101828] max-w-full lg:max-w-[461px]">
           Apply for the next cohort

@@ -7,7 +7,7 @@ import { Input } from "@/components/UI/input";
 import { NavbarWithDropdown } from "@/components/UI/navigation";
 import Footer from "@/components/UI/Footer";
 import Faq from "@/components/UI/Faq";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from "lucide-react"
 import { useState } from "react"
 
 export default function ContactSection(){ 
@@ -137,18 +137,23 @@ export default function ContactSection(){
               <div className="w-12 h-px bg-gray-400 mb-4"></div>
               <p className="text-gray-700 font-medium mb-4">Connect with us:</p>
               <div className="flex gap-3">
-                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors">
+                <a
+                  href="https://www.facebook.com/skillupedtech"
+                  className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors"
+                >
                   <Facebook className="w-5 h-5 text-gray-700" />
-                </div>
+                </a>
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors">
                   <Twitter className="w-5 h-5 text-gray-700" />
                 </div>
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors">
                   <Linkedin className="w-5 h-5 text-gray-700" />
                 </div>
+                {/* Restore when the SkillUp Edtech Instagram link is ready.
                 <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center hover:bg-gray-50 cursor-pointer transition-colors">
                   <Instagram className="w-5 h-5 text-gray-700" />
                 </div>
+                */}
               </div>
             </div>
           </div>

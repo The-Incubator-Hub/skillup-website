@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SkillUp Global",
+  title: "SkillUp Edtech",
   description: "Upskill yourself to thrive in Africa's digital future today.",
   icons: {
     icon: "/favicon.png", // This applies site-wide

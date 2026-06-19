@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Facebook,
-  Instagram,
   Youtube,
   Linkedin,
 } from "lucide-react";
@@ -17,7 +16,7 @@ export default function Footer() {
               <div className="mb-6 flex items-center">
                 <Image
                   src="/images/skillUp.png"
-                  alt="SkillUp Global Logo"
+                  alt="SkillUp Edtech Logo"
                   width={98}
                   height={20}
                   className="object-contain text-black"
@@ -26,13 +25,15 @@ export default function Footer() {
               </div>
 
               <div className="flex gap-4">
-                <Link href="" className="text-gray-600 hover:text-gray-900">
+                <Link href="https://www.facebook.com/skillupedtech" className="text-gray-600 hover:text-gray-900">
                   <Facebook className="w-5 h-5" />
                 </Link>
-                <Link href="https://www.instagram.com/theskillupglobal?igsh=YzljYTk1ODg3Zg==" className="text-gray-600 hover:text-gray-900">
+                {/* Restore when the SkillUp Edtech Instagram link is ready.
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   <Instagram className="w-5 h-5" />
                 </Link>
-                <Link href="" className="text-gray-600 hover:text-gray-900">
+                */}
+                <Link href="https://youtube.com/@theskillupedtech?si=LUIQ8mae_wX0tW88" className="text-gray-600 hover:text-gray-900">
                   <Youtube className="w-5 h-5" />
                 </Link>
                 <Link href="https://www.linkedin.com/company/theskillupglobal" className="text-gray-600 hover:text-gray-900">
