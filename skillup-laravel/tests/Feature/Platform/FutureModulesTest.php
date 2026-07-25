@@ -34,7 +34,10 @@ class FutureModulesTest extends TestCase
         $this->seed(FutureModuleSeeder::class);
 
         $this->get('/schools')->assertNotFound();
-        $this->get('/certificates/verify')->assertNotFound();
+
+        // /certificates/verify is no longer a future-module placeholder — it is
+        // a real page shipped with the Programs module (Phase 2).
+        $this->get('/certificates/verify')->assertOk();
     }
 
     public function test_active_future_module_can_render_public_readiness_page(): void

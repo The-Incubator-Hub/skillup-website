@@ -50,12 +50,12 @@ class CheckoutOrderService
                 'amount_paid' => 0,
                 'balance_due' => $subtotal,
                 'payment_provider' => 'paystack',
-                'metadata' => [
+                'metadata' => array_merge([
                     'customer' => $customer,
                     'checkout' => [
                         'payment_mode' => $data['payment_mode'],
                     ],
-                ],
+                ], $data['extra_metadata'] ?? []),
             ]);
 
             $order->items()->create([
@@ -73,13 +73,26 @@ class CheckoutOrderService
                 ],
             ]);
 
-            if (filled($data['discount_code'] ?? null)) {
+            $attemptDiscount = filled($data['discount_code'] ?? null);
+
+            if (! $attemptDiscount && ($data['auto_discount'] ?? false)) {
+                $attemptDiscount = $this->discounts->validate(
+                    $data['email'],
+                    $product,
+                    $subtotal,
+                    null,
+                    auth()->user(),
+                    ($data['payment_mode'] ?? 'full') === 'installment',
+                )->valid;
+            }
+
+            if ($attemptDiscount) {
                 $redemption = $this->discounts->lockForCheckout(
                     $order,
                     $product,
                     $data['email'],
                     $subtotal,
-                    $data['discount_code'],
+                    $data['discount_code'] ?? null,
                     auth()->user(),
                     ($data['payment_mode'] ?? 'full') === 'installment',
                 );

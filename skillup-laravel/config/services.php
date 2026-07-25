@@ -42,6 +42,14 @@ return [
         ],
     ],
 
+    'resend' => [
+        'api_key' => env('RESEND_API_KEY'),
+        'from_address' => env('RESEND_FROM_ADDRESS'),
+        'from_name' => env('RESEND_FROM_NAME', 'SkillUp Edtech'),
+        'base_url' => env('RESEND_BASE_URL', 'https://api.resend.com'),
+        'webhook_secret' => env('RESEND_WEBHOOK_SECRET'),
+    ],
+
     'zeptomail' => [
         'api_key' => env('ZEPTOMAIL_API_KEY'),
         'from_address' => env('ZEPTOMAIL_FROM_ADDRESS'),

@@ -12,6 +12,11 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\FutureModuleController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\DeploymentHealthController;
+use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\ProgramOnboardingController;
+use App\Http\Controllers\ProgramRegistrationController;
+use App\Http\Controllers\ResendWebhookController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -45,7 +50,8 @@ Route::get('/career-center', [FutureModuleController::class, 'show'])->defaults(
 Route::get('/jobs', [FutureModuleController::class, 'show'])->defaults('key', 'job_board')->name('future.jobs');
 Route::get('/employer', [FutureModuleController::class, 'show'])->defaults('key', 'employer_portal')->name('future.employer');
 Route::get('/alumni', [FutureModuleController::class, 'show'])->defaults('key', 'alumni_directory')->name('future.alumni');
-Route::get('/certificates/verify', [FutureModuleController::class, 'show'])->defaults('key', 'certificate_builder_verification')->name('future.certificates.verify');
+Route::get('/certificates/verify', [CertificateController::class, 'verify'])->name('certificates.verify');
+Route::get('/certificates/{serial}', [CertificateController::class, 'show'])->name('certificates.show');
 Route::get('/ambassadors', [FutureModuleController::class, 'show'])->defaults('key', 'ambassador_referral_program')->name('future.ambassadors');
 Route::get('/courses', [PublicCourseController::class, 'index'])->name('courses.index');
 Route::get('/courses/{trackSlug}/{productSlug}', [PublicCourseController::class, 'showProduct'])->name('courses.products.show');
@@ -84,6 +90,34 @@ Route::post('/resources/{slug}/download', [ResourceController::class, 'download'
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
 Route::get('/events/{slug}', [EventController::class, 'show'])->name('events.show');
 Route::post('/events/{slug}/register', [EventController::class, 'register'])->name('events.register');
+
+// Annual Programs (Summer AI, etc.)
+Route::redirect('/summer-ai', '/programs/summer-ai', 301);
+Route::get('/programs', [ProgramController::class, 'index'])->name('programs.index');
+Route::get('/programs/{program:slug}', [ProgramController::class, 'show'])->name('programs.show');
+Route::get('/programs/{program:slug}/editions/{editionSlug}', [ProgramController::class, 'showEdition'])->name('programs.editions.show');
+Route::post('/programs/{program:slug}/register', [ProgramRegistrationController::class, 'store'])
+    ->middleware('throttle:12,1')
+    ->name('programs.registrations.store');
+Route::get('/program-registrations/{registration:uuid}', [ProgramRegistrationController::class, 'status'])->name('programs.registrations.status');
+Route::get('/program-registrations/{registration:uuid}/verify-email', [ProgramRegistrationController::class, 'verifyPage'])->name('programs.registrations.verify.page');
+Route::get('/program-registrations/{registration:uuid}/verify/{token}', [ProgramRegistrationController::class, 'verifyByToken'])
+    ->middleware('throttle:12,1')
+    ->name('programs.registrations.verify');
+Route::post('/program-registrations/{registration:uuid}/verify-otp', [ProgramRegistrationController::class, 'verifyByOtp'])
+    ->middleware('throttle:8,1')
+    ->name('programs.registrations.verify.otp');
+Route::post('/program-registrations/{registration:uuid}/resend', [ProgramRegistrationController::class, 'resend'])
+    ->middleware('throttle:4,1')
+    ->name('programs.registrations.resend');
+Route::post('/program-registrations/{registration:uuid}/pay', [ProgramRegistrationController::class, 'pay'])
+    ->middleware('throttle:10,1')
+    ->name('programs.registrations.pay');
+Route::get('/program-onboarding/{token}', [ProgramOnboardingController::class, 'show'])->name('programs.onboarding.show');
+Route::post('/program-onboarding/{token}', [ProgramOnboardingController::class, 'store'])
+    ->middleware('throttle:12,1')
+    ->name('programs.onboarding.store');
+Route::post('/webhooks/resend', ResendWebhookController::class)->name('webhooks.resend');
 
 // Lead Capture Forms
 Route::post('/leads/newsletter', [LeadController::class, 'storeNewsletter'])->name('leads.newsletter');
