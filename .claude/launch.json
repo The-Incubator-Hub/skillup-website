@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "skillup-laravel",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": [
+        "-c",
+        "cd \"/Users/zacchaeusjames/Documents/Documents - Zacchaeus'/WebApp Projects/Skillup/skillup-laravel\" && npx concurrently -n server,vite \"php artisan serve --port=$PORT\" \"npm run dev\""
+      ],
+      "autoPort": true
+    }
+  ]
+}

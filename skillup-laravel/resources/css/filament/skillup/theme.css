@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap');
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@config 'tailwind.config.js';
+
+/* ---------------------------------------------------------------------------
+   SkillUp brand theme, shared by the Admin, Corporate, Instructor, and
+   Learner panels. Panel accent colors come from each provider's ->colors().
+--------------------------------------------------------------------------- */
+
+:root {
+    --skillup-navy: 20 24 62;      /* #14183E */
+    --skillup-soft: 239 246 255;   /* #EFF6FF */
+}
+
+/* Auth pages (login, password reset): brand-tinted backdrop, softer card. */
+html:not(.dark) .fi-simple-layout {
+    background-color: rgb(var(--skillup-soft));
+}
+
+.fi-simple-main {
+    border-radius: 1rem;
+    box-shadow: 0 20px 45px -20px rgb(20 24 62 / 0.25);
+}
+
+/* Sidebar: calmer surface, pill-shaped items, roomier brand area. */
+.fi-sidebar-header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.fi-sidebar-item-button {
+    border-radius: 0.5rem;
+}
+
+.fi-sidebar-group-label {
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+}
+
+/* Topbar: subtle blur like the public navbar. */
+.fi-topbar nav {
+    backdrop-filter: blur(8px);
+}
+
+/* Content surfaces: match the public app's rounded-2xl card language. */
+.fi-section,
+.fi-ta-ctn,
+.fi-wi-stats-overview-stat,
+.fi-fo-tabs,
+.fi-wi-widget > .fi-section {
+    border-radius: 0.75rem;
+}
+
+/* Headings pick up the navy used across the public site. */
+html:not(.dark) .fi-header-heading,
+html:not(.dark) .fi-section-header-heading {
+    color: rgb(var(--skillup-navy));
+}
+
+.fi-header-heading {
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+/* Primary buttons: match public CTA weight and radius. */
+.fi-btn {
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+/* Tables: lighter header band, comfortable row height. */
+html:not(.dark) .fi-ta-header-cell {
+    background-color: rgb(248 250 252);
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: light;
+        --skillup-blue: 13 78 255;
+        --skillup-navy: 20 24 62;
+        --skillup-deep-blue: 30 58 138;
+        --skillup-soft-blue: 239 246 255;
+        --skillup-light-blue: 219 234 254;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #ffffff;
+        color: #101828;
+        font-family: theme('fontFamily.sans');
+    }
+
+    ::selection {
+        background: rgb(var(--skillup-blue));
+        color: #ffffff;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
